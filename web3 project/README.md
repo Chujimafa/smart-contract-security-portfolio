@@ -1,10 +1,10 @@
-# 🌐 Web3 Project Directory
+# Web3 Project Directory
 
 ---
 
-## 🚀 Featured Web3 Development Projects
+##  Featured Web3 Development Projects
 
-### 1. 🔑 Multi-Signature Wallet System with Safe SDK + Thirdweb Integration
+### 1. Multi-Signature Wallet System with Safe SDK + Thirdweb Integration
 
 | Key Technology                  | Verification Focus                                        | Repo Link                                                                                   |
 | :------------------------------ | :-------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ This system implements a robust multi-signature corporate treasury wallet using 
 
 ---
 
-### 2. 🖼️ Web3 Frontend DApp - NFT Pilot
+### 2. Web3 Frontend DApp - NFT Pilot
 
 | Key Technology                          | Verification Focus                                    | Repo Link                                                                       |
 | :-------------------------------------- | :---------------------------------------------------- | :------------------------------------------------------------------------------ |
@@ -26,7 +26,7 @@ A decentralized application (DApp) built with Next.js integrating several modern
 
 ---
 
-### 3. 📈 DeFi Yield Dashboard
+### 3. DeFi Yield Dashboard
 
 | Key Technology                     | Verification Focus                                      | Repo Link                                                                 |
 | :--------------------------------- | :------------------------------------------------------ | :------------------------------------------------------------------------ |
@@ -37,7 +37,7 @@ A full-stack project providing a simple dashboard to display yield farming oppor
 
 ---
 
-### 4. 🎁 A Secure and Efficient ERC20 Airdrop Contract
+### 4. A Secure and Efficient ERC20 Airdrop Contract
 
 | Key Technology                             | Verification Focus                                     | Repo Link                                                                     |
 | :----------------------------------------- | :----------------------------------------------------- | :---------------------------------------------------------------------------- |
@@ -48,7 +48,7 @@ This project implements an ERC20 airdrop contract that optimizes for security an
 
 ---
 
-### 5. 💰 Decentralized Stablecoin (DSC) Smart Contracts
+### 5. Decentralized Stablecoin (DSC) Smart Contracts
 
 | Key Technology                                          | Verification Focus                                           | Repo Link                                                                                                                 |
 | :------------------------------------------------------ | :----------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
@@ -59,7 +59,7 @@ A simplified MakerDAO-inspired decentralized stablecoin system (DSC) pegged to t
 
 ---
 
-### 6. 🌉 Cross-Chain Rebase Token Protocol
+### 6. Cross-Chain Rebase Token Protocol
 
 | Key Technology                                     | Verification Focus                                           | Repo Link                                                                                           |
 | :------------------------------------------------- | :----------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ This protocol integrates **Chainlink CCIP** to facilitate seamless cross-chain b
 
 ---
 
-### 7. 🔄 UUPS Upgradeable Smart Contract Demo
+### 7. UUPS Upgradeable Smart Contract Demo
 
 | Key Technology                          | Verification Focus                                      | Repo Link                                                                                                        |
 | :-------------------------------------- | :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------- |
@@ -81,7 +81,7 @@ A demonstration of the **UUPS (Universal Upgradeable Proxy Standard)** pattern u
 
 ---
 
-### 8. 💯 PunkteSystem Smart Contract Development
+### 8. PunkteSystem Smart Contract Development
 
 | Key Technology                                    | Verification Focus                                           | Repo Link                                                                                                                                   |
 | :------------------------------------------------ | :----------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |

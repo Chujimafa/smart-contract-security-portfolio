@@ -1,15 +1,46 @@
-# My Findings:[Brivault]
+# Audit Contest Summary: [Brivault]
 
-- [My Findings:\[Brivault\]](#my-findingsbrivault)
+This document summarizes the results and key findings from my participation in the `Codehawk` audit contest, held for the `Brivault` codebase.
+
+- [Audit Contest Summary: \[Brivault\]](#audit-contest-summary-brivault)
+  - [1. Overview \& Project Details](#1-overview--project-details)
+  - [2. Contest Performance Summary](#2-contest-performance-summary)
+- [Detailed Audit Findings (Valid Submissions)](#detailed-audit-findings-valid-submissions)
   - [High](#high)
     - [\[H-1\] Faulty `stakedAsset` Tracking in `BriVault::deposit` function Locks Part of User Assets](#h-1-faulty-stakedasset-tracking-in-brivaultdeposit-function-locks-part-of-user-assets)
     - [\[H-2\] `BriVault::joinEvent` allows multiple joins; incorrect share calculation may prevent user withdrawals or cause withdrawal amount to be less than deposit](#h-2-brivaultjoinevent-allows-multiple-joins-incorrect-share-calculation-may-prevent-user-withdrawals-or-cause-withdrawal-amount-to-be-less-than-deposit)
     - [\[H-3\] `Brivault` overrides `deposit` instead of `_deposit` function, causing shares to be minted to `msg.sender` rather than the intended `receiver` and bypassing `ERC4626’s:: _convertToShares`, which leads to inaccurate share calculations.](#h-3-brivault-overrides-deposit-instead-of-_deposit-function-causing-shares-to-be-minted-to-msgsender-rather-than-the-intended-receiver-and-bypassing-erc4626s-_converttoshares-which-leads-to-inaccurate-share-calculations)
   - [Medium](#medium)
     - [\[M-1\] Iterating Over All Users in `BriVault::_getWinnerShares ()`  Allows Potential DoS](#m-1-iterating-over-all-users-in-brivault_getwinnershares---allows-potential-dos)
-  - [Low](#low)
-    - [\[L-2\] Missing Validation for `eventStartDate` and `eventEndDate` Leading to Invalid or Illogical Time Windows, Potentially Enabling MEV Exploitation](#l-2-missing-validation-for-eventstartdate-and-eventenddate-leading-to-invalid-or-illogical-time-windows-potentially-enabling-mev-exploitation)
 
+
+
+## 1. Overview & Project Details
+
+| Field               | Detail                                                                                 |
+| :------------------ | :------------------------------------------------------------------------------------- |
+| **Project Audited** | **Brivault**                                                                           |
+| **Contest Period**  | 2025/11/06 – 2025/11/13                                                                |
+| **Codebase Link**   | [2025-11-brivault](https://github.com/CodeHawks-Contests/2025-11-brivault)             |
+| **Final Report**    | [Final Report](https://codehawks.cyfrin.io/c/2025-11-brivault/results?page=1&t=report) |
+
+
+---
+
+## 2. Contest Performance Summary
+
+This section provides a statistical breakdown of my submission compared to the final results.
+| Category            | My Valid Findings |   Total in Contest   |
+| :------------------ | :---------------: | :------------------: |
+| **High Severity**   |       **3**       |          6           |
+| **Medium Severity** |       **1**       |          2           |
+| **Medium Severity** |       **0**       |          4           |
+| **Overall Rank**    |     **29th**      | **115 Participants** |
+
+
+---
+
+# Detailed Audit Findings (Valid Submissions)
 
 ## High
 
@@ -352,106 +383,5 @@ function joinEvent(uint256 countryId) public {
     totalParticipantShares += participantShares;
     emit joinedEvent(msg.sender, countryId);
 }
-
-```
-
-## Low
-
-### [L-2] Missing Validation for `eventStartDate` and `eventEndDate` Leading to Invalid or Illogical Time Windows, Potentially Enabling MEV Exploitation
-
-**Description:** The `Brivaul::constructor` and related functions do not verify that `eventEndDate` is later than `eventStartDate` and do not enforce a minimum participation duration. This can create invalid or extremely short event windows, allowing accidental misconfiguration or administrative errors.
-
-Without a minimum duration, a malicious MEV bot or miner could front‑run or reorder transactions in the mempool, causing honest participants’ actions (e.g., deposits or team selections) to revert or execute outside the intended event window, potentially preventing legitimate participation.
-
-```javascript
-    constructor (IERC20 _asset, uint256 _participationFeeBsp, uint256 _eventStartDate, address _participationFeeAddress, uint256 _minimumAmount, uint256 _eventEndDate) ERC4626 (_asset) ERC20("BriTechLabs", "BTT") Ownable(msg.sender) {
-         if (_participationFeeBsp > PARTICIPATIONFEEBSPMAX){
-            revert limiteExceede();
-         }       
-         participationFeeBsp = _participationFeeBsp;
-@>       eventStartDate = _eventStartDate;
-@>       eventEndDate = _eventEndDate;
-         participationFeeAddress = _participationFeeAddress;
-         minimumAmount = _minimumAmount;
-         _setWinner = false;
-    }
-
-```
-
-**Impact:** Setting invalid timestamp combinations can immediately disrupt core contract functionality, preventing users from participating in intended activities. If endTime is accidentally set before startTime or in the past, the event may appear concluded instantly, blocking deposits, withdrawals, and other interactions. 
-
-
-**Proof of Concept:**
-1. Accidentally setting `eventStartDate` later than `eventEndDate`.
-2. After advancing time past `eventEndDate`, users are still able to deposit, joinEvent, and cancelParticipation.
-3. The owner cannot call `setWinner` function, even though endTime has passed, because startTime has not yet been reached.
-   
-Place the following code in briVault.t.sol.
-
-<details>
-<summary>Proof Of Code</summary>
-
-```javascript
-   function testEventStartLaterThenEventEnd() public{
-        BriVault briVaultTimeTesing;
-        uint256 eventStartDateLate = block.timestamp + 30 days;
-        uint256 eventEndDateEarly = block.timestamp + 2 days;
-
-        vm.startPrank(owner);
-        briVaultTimeTesing = new BriVault(
-            IERC20(address(mockToken)), 
-            participationFeeBsp,
-            eventStartDateLate,
-            participationFeeAddress,
-            minimumAmount,
-            eventEndDateEarly
-        );
-        briVaultTimeTesing.setCountry(countries);
-        vm.stopPrank();
-        // 3 days after blockchain.block , later than eventEndDateEarly and earlier thaneventStartDateLate
-        vm.warp(block.timestamp + 3 days);  
-
-        vm.startPrank(user1);
-        mockToken.approve(address(briVaultTimeTesing), 10 ether);
-        briVaultTimeTesing.deposit(5 ether, user1);
-        briVaultTimeTesing.joinEvent(10);
-        briVaultTimeTesing.cancelParticipation();
-        vm.stopPrank();
-
-        vm.startPrank(owner);
-        vm.expectRevert();
-        briVaultTimeTesing.setWinner(10);
-        vm.stopPrank();      
-    }
-
-```
-</details>
-
-
-
-
-**Recommended Mitigation:** 
-Introduce a minimum event duration (MINDURATION) and enforce it in the constructor  by requiring that eventEndDate is at least MINDURATION after eventStartDate.
-
-```diff
-
-+   uint256 public constant MINDURATION = 1 week;
-
-   constructor (IERC20 _asset, uint256 _participationFeeBsp, uint256 _eventStartDate,
-   address _participationFeeAddress, uint256 _minimumAmount, uint256 _eventEndDate) 
-   ERC4626 (_asset) ERC20("BriTechLabs", "BTT") Ownable(msg.sender) {
-         if (_participationFeeBsp > PARTICIPATIONFEEBSPMAX){
-            revert limiteExceede();
-         } 
-+        if(_eventEndDate <_eventStartDate + MINDURATION){
-+           revert InvalidEventTime();}  
-         participationFeeBsp = _participationFeeBsp;
-         eventStartDate = _eventStartDate;
-         eventEndDate = _eventEndDate;
-         MINDURATION = _minDuration
-         participationFeeAddress = _participationFeeAddress;
-         minimumAmount = _minimumAmount;
-         _setWinner = false;
-    }
 
 ```
