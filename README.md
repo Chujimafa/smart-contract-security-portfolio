@@ -46,7 +46,7 @@ Berlin/Brussels based. Former Architect now pivoting my structural mindset into 
 
 **Rank at 20260201: rgb(201, 52, 29)**
 
-![Codehawk Rank](./competitive%20Audit/CodeHawks/Mafa-stats.png)
+![Codehawk Rank](./competitive-audit/CodeHawks/Mafa-stats.png)
 
 | Project               | Protocol Type               | High  | Medium | Low / Gas | Analysis & PoC                                                                           |                                 Github Link                                 |
 | :-------------------- | :-------------------------- | :---: | :----: | :-------: | :--------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------: |
