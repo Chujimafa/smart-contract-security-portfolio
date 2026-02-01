@@ -45,7 +45,7 @@ Berlin/Brussels based. Former Architect now pivoting my structural mindset into 
  
  [View My Security Review Reports](./reports/)
 
- 
+
 
 ## Competitive Audits
 
@@ -59,7 +59,7 @@ Berlin/Brussels based. Former Architect now pivoting my structural mindset into 
 | :-------------------- | :-------------------------- | :---: | :----: | :-------: | :--------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------: |
 | **Brivault**          | Yield Aggregator (ERC-4626) |   3   |   1    |     -     | [View Findings](./competitive-audit/CodeHawks/BriVault_Results_and_Findings.md)          |     [🔗](https://github.com/Chujimafa/2025-11-brivault-security-review)      |
 | **Beatland Festival** | ERC1155                     |   1   |   2    |     -     | [View Findings](./competitive-audit/CodeHawks/Beatland_Festival_Results_and_Findings.md) |  [🔗](https://github.com/Chujimafa/2025-beatland-festival-security-review)   |
-| **MultiSig Timelock** | Governance                  |   1   |   1    |     1     | [View Findings](./competitive-audit/CodeHawks/brivault_results_and_findings.md)          | [🔗](https://github.com/Chujimafa/2025-12-multisig-timelock-security-review) |
+| **MultiSig Timelock** | Governance                  |   1   |   1    |     1     | [View Findings](./competitive-audit/CodeHawks/Multisig_TimeLock_Results_and_Findings.md) | [🔗](https://github.com/Chujimafa/2025-12-multisig-timelock-security-review) |
 
 
 
