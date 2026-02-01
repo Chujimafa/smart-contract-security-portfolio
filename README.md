@@ -5,7 +5,9 @@ A collection of security audits and PoCs focused on DeFi logic, smart contract v
 
 Berlin/Brussels based. Former Architect now pivoting my structural mindset into Smart Contract Auditing. Deep diving into CTFs and DeFi protocols.
 
-[LinkedIn Profile](https://www.linkedin.com/in/chujun-fan-9354a0201)
+**[LinkedIn Profile](https://www.linkedin.com/in/chujun-fan-9354a0201)**
+
+
 
 ## Technical Stack & Methodology
 
@@ -27,24 +29,29 @@ Berlin/Brussels based. Former Architect now pivoting my structural mindset into 
 2. **Property-based Testing:** Defining core invariants and using fuzzing/symbolic execution to attempt to break system guarantees.
 3. **PoC Development:** Crafting executable Proof-of-Concepts in Foundry to demonstrate and validate all identified vulnerabilities.
 
+
 ## Security Research & DeFi Challenges
 
 ### [Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)
 
 *A collection of solutions and detailed exploit PoCs for the classic DeFi security wargame.*
-- [View all my exploit solutions here](https://github.com/Chujimafa/damn-vulnerable-defi-v4-solutions)
-- [**Coming Soon on Medium**]: *My Journey Through Damn Vulnerable DeFi V4.*
+* [View all my exploit solutions here](https://github.com/Chujimafa/damn-vulnerable-defi-v4-solutions)
+* [**Coming Soon on Medium**]: *My Journey Through Damn Vulnerable DeFi V4.*
+
+
 
 ## Audit Reports
  A collection of structured security analysis reports and PoCs for various educational DeFi protocols. 
  
- [View My Security Review Portfolio](./reports/)
+ [View My Security Review Reports](./reports/)
+
+ 
 
 ## Competitive Audits
 
 ### Codehawk Performance Dashboard
 
-**Rank at 20260201: rgb(201, 52, 29)**
+**Current Rank:** 383 (As of 2026-02-01)
 
 ![Codehawk Rank](./competitive-audit/CodeHawks/Mafa-stats.png)
 
@@ -59,7 +66,7 @@ Berlin/Brussels based. Former Architect now pivoting my structural mindset into 
 ## Specialized Tooling Proof-of-Concepts
 A dedicated workspace for advanced security methodologies, focusing on **Fuzzing** and **Formal Verification (FV)**. 
 
-> **Status:** Currently building out comprehensive test suites for DeFi logic. Content coming soon.
+* **Status:** Currently building out comprehensive test suites for DeFi logic. Content coming soon.
 
 
 ## Featured Web3 Projects
@@ -68,3 +75,4 @@ Beyond auditing, I actively build and research complex DeFi architectures and se
 > [!TIP]
 > **[View My Full Project Directory & Security Specifications](./web3-project/README.md)**
 > *Includes Deep Dives into: Stablecoin Engines, Cross-Chain Protocols, and Secure Governance.*
+
