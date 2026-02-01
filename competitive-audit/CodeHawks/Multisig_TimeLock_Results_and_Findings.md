@@ -173,6 +173,7 @@ place the following code in MultiSigTimelockTest.t.sol:
     }
 
 ```
+</details>
 
 **Recommended Mitigation:**: The `_executeTransaction` function should verify that all confirmations originate from accounts that currently hold the `signingRole` at the time of execution.
 
