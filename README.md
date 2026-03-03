@@ -30,14 +30,16 @@ Berlin/Brussels based. Former Architect now pivoting my structural mindset into 
 3. **PoC Development:** Crafting executable Proof-of-Concepts in Foundry to demonstrate and validate all identified vulnerabilities.
 
 
-## Security Research & DeFi Challenges
+## Smart Contract Security Research & Publications
 
 ### [Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)
 
 *A collection of solutions and detailed exploit PoCs for the classic DeFi security wargame.*
 * [View all my exploit solutions here](https://github.com/Chujimafa/damn-vulnerable-defi-v4-solutions)
-* [**Coming Soon on Medium**]: *My Journey Through Damn Vulnerable DeFi V4.*
-
+  
+*My Damn Vulnerable DeFi research series, published on Medium.
+* [Damn Vulnerable DeFi Challenges 2 Naive receiver Walkthrough](https://medium.com/@maggie.chujifan/damn-vulnerable-defi-challenges-2-naive-receiver-walkthrough-723da175878a)
+* [Damn Vulnerable DeFi Challenges 17 Curvy Puppet Walkthrough](https://medium.com/@maggie.chujifan/damn-vulnerable-defi-challenges-17-curvy-puppet-walkthrough-0147fef8b737)
 
 
 ## Audit Reports
