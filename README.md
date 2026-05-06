@@ -1,80 +1,70 @@
-# smart-contract-security-portfolio
-A collection of security audits and PoCs focused on DeFi logic, smart contract vulnerabilities, and best-practice mitigations.
+# Smart Contract Security Portfolio
 
-## About me 
+> Business Developer · Smart Contract Security Researcher. Berlin/Brussels based. Specializing in DeFi logic vulnerabilities, formal verification, and competitive auditing.
 
-Berlin/Brussels based. Former Architect now pivoting my structural mindset into Smart Contract Auditing. Deep diving into CTFs and DeFi protocols.
+**[LinkedIn](https://www.linkedin.com/in/chujun-fan-9354a0201)** · **[GitHub](https://github.com/Chujimafa)**
 
-**[LinkedIn Profile](https://www.linkedin.com/in/chujun-fan-9354a0201)**
+---
 
+## Competitive Audit Results
 
+### CodeHawks
 
-## Technical Stack & Methodology
+| Project               | Protocol Type               | High  | Medium |  Low  | Report                                                                              |                                    Repo                                     |
+| :-------------------- | :-------------------------- | :---: | :----: | :---: | :---------------------------------------------------------------------------------- | :-------------------------------------------------------------------------: |
+| **Brivault**          | Yield Aggregator (ERC-4626) |   3   |   1    |   —   | [Findings](./competitive-audit/CodeHawks/BriVault_Results_and_Findings.md)          |     [🔗](https://github.com/Chujimafa/2025-11-brivault-security-review)      |
+| **Beatland Festival** | ERC-1155                    |   1   |   2    |   —   | [Findings](./competitive-audit/CodeHawks/Beatland_Festival_Results_and_Findings.md) |  [🔗](https://github.com/Chujimafa/2025-beatland-festival-security-review)   |
+| **MultiSig Timelock** | Governance                  |   1   |   1    |   1   | [Findings](./competitive-audit/CodeHawks/Multisig_TimeLock_Results_and_Findings.md) | [🔗](https://github.com/Chujimafa/2025-12-multisig-timelock-security-review) |
 
-### Languages & Frameworks
-- **Languages:** Solidity, JavaScript 
-- **Frameworks:** Foundry, Hardhat
-  
-### Security & Testing Suite
-- **Fuzzing & Invariant Testing:** 
-  - **Foundry:** Advanced stateful/stateless fuzzing and system-wide invariant development.
-  - **Echidna:** Property-based fuzzing to discover deep edge cases and state transitions.
-- **Formal Verification (FV):** 
-  - **Halmos:** Symbolic testing for formal proofs of contract properties.
-  - **Certora:** Writing CVL specifications for high-assurance logic verification.
+### Radcipher Audit Arena
 
+**Rank:** 19 · [Leaderboard](https://radcipher.com/competition)
 
-###  Methodology
-1. **Manual Review:** Line-by-line analysis focusing on business logic, access control, and integration risks (e.g., flash loans, oracle manipulation).
-2. **Property-based Testing:** Defining core invariants and using fuzzing/symbolic execution to attempt to break system guarantees.
-3. **PoC Development:** Crafting executable Proof-of-Concepts in Foundry to demonstrate and validate all identified vulnerabilities.
+### Public Contests — Immunefi · Sherlock · Cantina · Code4rena
 
+> Valid findings confirmed across multiple platforms. Reports pending official disclosure — links will be added upon publication.
 
-## Smart Contract Security Research & Publications
+---
 
-### [Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)
+## Solo Audit Reports
 
-*A collection of solutions and detailed exploit PoCs for the classic DeFi security wargame.*
-* [View all my exploit solutions here](https://github.com/Chujimafa/damn-vulnerable-defi-v4-solutions)
-  
-*My Damn Vulnerable DeFi research series, published on Medium.
-* [Damn Vulnerable DeFi Challenges 2 Naive receiver Walkthrough](https://medium.com/@maggie.chujifan/damn-vulnerable-defi-challenges-2-naive-receiver-walkthrough-723da175878a)
-* [Damn Vulnerable DeFi Challenges 17 Curvy Puppet Walkthrough](https://medium.com/@maggie.chujifan/damn-vulnerable-defi-challenges-17-curvy-puppet-walkthrough-0147fef8b737)
+A collection of structured security reviews and PoC exploits for DeFi protocols.
 
+**[View All Reports →](./reports/)**
 
-## Audit Reports
- A collection of structured security analysis reports and PoCs for various educational DeFi protocols. 
- 
- [View My Security Review Reports](./reports/)
+---
 
+## Research & Publications
 
+### Damn Vulnerable DeFi — Full Exploit Series
 
-## Competitive Audits
+All 18 challenges solved with executable Foundry PoCs.
 
-### Codehawk Performance Dashboard
+**[GitHub: exploit solutions](https://github.com/Chujimafa/damn-vulnerable-defi-v4-solutions)**
 
-**Current Rank:** 383 (As of 2026-02-01)
+*Published walkthroughs on Medium:*
 
-![Codehawk Rank](./competitive-audit/CodeHawks/Mafa-stats.png)
+- [Challenges 1–18 Full Breakdown](https://medium.com/coinsbench/damn-vulnerable-defi-v4-walkthrough-challenges-1-18-breakdown-6316d34a8492)
+- [Challenge 2 — Naive Receiver](https://medium.com/@maggie.chujifan/damn-vulnerable-defi-challenges-2-naive-receiver-walkthrough-723da175878a)
+- [Challenge 17 — Curvy Puppet](https://medium.com/@maggie.chujifan/damn-vulnerable-defi-challenges-17-curvy-puppet-walkthrough-0147fef8b737)
 
-| Project               | Protocol Type               | High  | Medium | Low / Gas | Analysis & PoC                                                                           |                                 Github Link                                 |
-| :-------------------- | :-------------------------- | :---: | :----: | :-------: | :--------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------: |
-| **Brivault**          | Yield Aggregator (ERC-4626) |   3   |   1    |     -     | [View Findings](./competitive-audit/CodeHawks/BriVault_Results_and_Findings.md)          |     [🔗](https://github.com/Chujimafa/2025-11-brivault-security-review)      |
-| **Beatland Festival** | ERC1155                     |   1   |   2    |     -     | [View Findings](./competitive-audit/CodeHawks/Beatland_Festival_Results_and_Findings.md) |  [🔗](https://github.com/Chujimafa/2025-beatland-festival-security-review)   |
-| **MultiSig Timelock** | Governance                  |   1   |   1    |     1     | [View Findings](./competitive-audit/CodeHawks/Multisig_TimeLock_Results_and_Findings.md) | [🔗](https://github.com/Chujimafa/2025-12-multisig-timelock-security-review) |
+---
 
+## Technical Stack
 
+| Category                | Tools                                 |
+| :---------------------- | :------------------------------------ |
+| **Languages**           | Solidity, JavaScript                  |
+| **Frameworks**          | Foundry, Hardhat                      |
+| **Fuzzing**             | Foundry (stateful/stateless), Echidna |
+| **Formal Verification** | Halmos, Certora (CVL)                 |
 
-## Specialized Tooling Proof-of-Concepts
-A dedicated workspace for advanced security methodologies, focusing on **Fuzzing** and **Formal Verification (FV)**. 
+### Methodology
 
-* **Status:** Currently building out comprehensive test suites for DeFi logic. Content coming soon.
+1. **Manual Review** — Business logic, access control, integration risks (flash loans, oracle manipulation)
+2. **Property-based Testing** — Invariant definition, fuzzing, symbolic execution
+3. **PoC Development** — Executable Foundry exploits for every confirmed finding
 
+---
 
-## Featured Web3 Projects
-Beyond auditing, I actively build and research complex DeFi architectures and security primitives. My development work focuses on **logic integrity**, **gas optimization**, and **advanced smart contract patterns**.
-
-> [!TIP]
-> **[View My Full Project Directory & Security Specifications](./web3-project/README.md)**
-> *Includes Deep Dives into: Stablecoin Engines, Cross-Chain Protocols, and Secure Governance.*
 
