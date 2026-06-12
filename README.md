@@ -18,7 +18,7 @@
 
 ### Radcipher Audit Arena
 
-**Rank:** 19 · [Leaderboard](https://radcipher.com/competition)
+**Rank:** 11 · [Leaderboard](https://radcipher.com/competition)
 
 ### Public Contests — Immunefi · Sherlock · Cantina · Code4rena
 
