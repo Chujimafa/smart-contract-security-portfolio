@@ -9,9 +9,8 @@
 ## Competitive Audit Results
 ### Public Contests — Immunefi · Sherlock · Cantina · Code4rena
 
-| Platform  | Project                                                        | Language/Chain | Status                                                                                                    | Finding                                                                                                                            |
-| :-------- | :------------------------------------------------------------- | :------------- | :-------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
-| Code4rena | [**Monetrix**](https://code4rena.com/reports/2026-04-monetrix) | Solidity (EVM) | Acknowledged in [QA report](https://code4rena.com/audits/2026-04-monetrix/submissions/S-1535) (item L-02) | [`_sendL1Bridge` uses `spotBalance.total` instead of free/withdrawable balance](./competitive-audit/code4rena/Monetrix_Finding.md) |
+| Platform | Project | Language/Chain | Status | Finding |
+| :------- | :------ | :------------- | :----- | :------ |
 
 
 ### CodeHawks
@@ -25,8 +24,6 @@
 ### Radcipher Audit Arena
 
 **Rank:** 10 · [Leaderboard](https://radcipher.com/competition)
-
-
 
 
 ## Research & Publications
