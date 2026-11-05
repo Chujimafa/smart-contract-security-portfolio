@@ -4,27 +4,28 @@
 
 **[LinkedIn](https://www.linkedin.com/in/chujun-fan-9354a0201)** · **[GitHub](https://github.com/Chujimafa)**
 
+I taught myself smart contract security on EVM and Solana. Full-time in web3 audit contests since May 2026. I like logic puzzles and finding bugs.
+
 ---
 
-## Competitive Audit Results
-### Public Contests — Immunefi · Sherlock · Cantina · Code4rena
+## 🏆 Public Contests & Bug Bounties
 
-| Platform | Project | Language/Chain | Status | Finding |
-| :------- | :------ | :------------- | :----- | :------ |
+HackenProof Profile - https://hackenproof.com/hackers/mafa
+
+| Date | Contest | Platform | Findings | Report |
+|---|---|---|---|---|
+| Sep '26 | [Rain USDR](https://dashboard.hackenproof.com/user/programs/rain-usdr-smart-contract-audit-contest-sept-2026) | HackenProof | 3 High | [Findings](./reports/rain-usdr-contracts) |
 
 
-### CodeHawks
+## CodeHawks
 
-| Project               | Language/Chain | Protocol Type               | High  | Medium |  Low  | Report                                                                              |                                    Repo                                     |
-| :-------------------- | :------------- | :-------------------------- | :---: | :----: | :---: | :---------------------------------------------------------------------------------- | :-------------------------------------------------------------------------: |
-| **Brivault**          | Solidity (EVM) | Yield Aggregator (ERC-4626) |   3   |   1    |   —   | [Findings](./competitive-audit/CodeHawks/BriVault_Results_and_Findings.md)          |     [🔗](https://github.com/Chujimafa/2025-11-brivault-security-review)      |
-| **Beatland Festival** | Solidity (EVM) | ERC-1155                    |   1   |   2    |   —   | [Findings](./competitive-audit/CodeHawks/Beatland_Festival_Results_and_Findings.md) |  [🔗](https://github.com/Chujimafa/2025-beatland-festival-security-review)   |
-| **MultiSig Timelock** | Solidity (EVM) | Governance                  |   1   |   1    |   1   | [Findings](./competitive-audit/CodeHawks/Multisig_TimeLock_Results_and_Findings.md) | [🔗](https://github.com/Chujimafa/2025-12-multisig-timelock-security-review) |
+| Date | Contest | Findings | Report |
+|---|---|---|---|
+| Dec '25 | [MultiSig Timelock](https://codehawks.cyfrin.io/c/2025-12-multisig-timelock) | 1 High, 1 Medium, 1 Low | [Findings](./competitive-audit/CodeHawks/Multisig_TimeLock_Results_and_Findings.md) |
+| Nov '25 | [BriVault](https://codehawks.cyfrin.io/c/2025-11-brivault) | 3 High, 1 Medium | [Findings](./competitive-audit/CodeHawks/BriVault_Results_and_Findings.md) |
+| Jul '25 | [Beatland Festival](https://codehawks.cyfrin.io/c/2025-07-beatland-festival) | 1 High, 2 Medium | [Findings](./competitive-audit/CodeHawks/Beatland_Festival_Results_and_Findings.md) |
 
-### Radcipher Audit Arena
-
-**Rank:** 10 · [Leaderboard](https://radcipher.com/competition)
-
+---
 
 ## Research & Publications
 
@@ -39,5 +40,3 @@ All 18 challenges solved with executable Foundry PoCs.
 - [Challenges 1–18 Full Breakdown](https://medium.com/coinsbench/damn-vulnerable-defi-v4-walkthrough-challenges-1-18-breakdown-6316d34a8492)
 - [Challenge 2 — Naive Receiver](https://medium.com/@maggie.chujifan/damn-vulnerable-defi-challenges-2-naive-receiver-walkthrough-723da175878a)
 - [Challenge 17 — Curvy Puppet](https://medium.com/@maggie.chujifan/damn-vulnerable-defi-challenges-17-curvy-puppet-walkthrough-0147fef8b737)
-
----
